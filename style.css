@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+.boekSelectie__cover {
+    max-width: 100px;
+}
+.boekSelectie__rij--accent {
+    background: #def;
+}
+.boekSelectie__data-cel {
+    padding: 1em;
+    vertical-align: top;
+}
+.boekSelectie__data-cel:ntd-child(3) {
+    padding: 0;
+}
+
+/*layout*/
+.boekSelectie {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 1em;
+    margin-bottom: 1em;
+}
+.boekSelectie:nth-child(even) {
+    background: #EEE;
+}
+.boekSelectie__main {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    padding: .5em 0;
+}
+
+
+
+
+.boekSelectie__titel {
+    margin: 0;
+}
+.boekSelectie__overig {
+    margin: 0;
+    font-size: .8em;
+    color: #444;
+}
+.boekSelectie__prijs {
+    font-size: 2em;
+    padding: .5em;
+}
+
+@media screen and (min-width: 60em) {/* 2 lines*/
+    #boeken {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 2em;
+    }
+    .boekSelectie:nth-child(even) {
+        background-color: inherit;
+    }
+    .boekSelectie:nth-child(4n+2),
+    .boekSelectie:nth-child(4n+3) {
+        background-color: #EEE;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #boeken {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 2em;
+    }
+    .boekSelectie:nth-child(odd) {
+        background-color: inherit;
+    }
+    .boekSelectie:nth-child(2n+0) {
+        background-color: #EEE;
+    }
+}
